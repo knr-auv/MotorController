@@ -1,0 +1,36 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "name": "Debug (OpenOCD)",
+            "servertype": "openocd",
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "buildAndUpload",
+            "runToMain": true,
+            "svdFile": "${workspaceRoot}/platform/STM32F4.svd",
+            "executable": "./build/main.elf",
+            "device": "STM32F411RE",
+            "showDevDebugOutput": true,
+            "configFiles": [
+                "interface/stlink-v2-1.cfg",
+                "target/stm32f4x.cfg"
+            ],
+            "swoConfig": {
+                "enabled": true,
+                "cpuFrequency": 10000000,
+                "swoFrequency": 2000000,
+               
+                "source": "probe",
+                "decoders": [
+                    { "type": "console", "label": "ITM", "port": 0 }
+                ]
+            }
+            
+           
+            
+        }
+    ]
+}
