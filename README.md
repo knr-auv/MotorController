@@ -17,7 +17,7 @@ This app is used to control "Okoń" - an AUV built by KNR AUV Team from Warsaw U
 * [Setup](#setup)
 
 ## General Info
-This app is used to control "Okoń" - an AUV built by KNR AUV Team from Warsaw University of Technology. App provides PID controler, and act as an interface between sensors and NVIDIA Jetson Nano - AUV core.
+This app is used to control "Okoń" - an AUV built by KNR AUV Team from Warsaw University of Technology. App provides PID controler, and act as an interface between sensors and NVIDIA Jetson TX2 - AUV core.
 
 ## Used Libraries
 In order to keep app optimized we only used CMSIS and std peripheral libraries provided by STM. Drivers for each external peripheral were created on our own.
